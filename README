@@ -1,0 +1,23 @@
+# 설치 버전
+- Node : 20.0
+- Next.js : 13.2.4 
+
+
+# 프로젝트 생성
+1. 프로젝트 생성
+```sh
+$ npx create-next-app@latest --experimental-app
+```
+2. 옵션 : All No 
+3. Package.json Next 버전 변경
+```
+{
+   "dependencies" : {
+      "next": "13.2.4"
+   }
+}
+```
+4. 실행 테스트
+```
+$ npm run dev
+```
