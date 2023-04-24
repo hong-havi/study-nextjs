@@ -1,6 +1,8 @@
+
+
 export default function Home(){
   let name = 'hong'
-  let link = 'https://google.com'
+
   return (
     <div className="main">
       <div>
@@ -8,7 +10,6 @@ export default function Home(){
         <h4 style={{ color:'red' , fontSize:'15px' }}>스타일</h4>
       </div>
       <div>호이 { name }</div>
-      <a href={ link }>링크</a>
     </div>
   )
 }
