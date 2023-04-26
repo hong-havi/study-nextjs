@@ -3,7 +3,6 @@
 import { useRouter } from "next/navigation"
 
 export default function DetailLink( props ){
-    console.log(props.id)
     let router = useRouter()
 
     return (

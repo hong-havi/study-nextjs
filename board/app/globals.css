@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+.NavBar .NavButton{
+  padding: 0px 5px 0px 5px
+}
+
 .list-bg {
   background: rgb(249, 250, 255);
   padding: 10px;
@@ -12,6 +16,8 @@ a {
   padding: 20px;
   margin-bottom: 5px;
   box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
+  opacity : 1;
+  transition: all 1s;
 }
 .list-item h4 {
   font-size: 20px;

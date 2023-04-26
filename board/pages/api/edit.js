@@ -1,10 +1,13 @@
 import { connectDB } from "@/util/database"
 import { ObjectId } from "mongodb"
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/pages/api/auth/[...nextauth]'
 
 export default async function handler( request, response ){
     
     switch( request.method  ){
         case 'POST' :
+            const session = await getServerSession(request, response, authOptions)
         
             const { id, title, content } = request.body
             
@@ -23,15 +26,19 @@ export default async function handler( request, response ){
                 //.json('No exist content') 
             }
 
-            try{
+            try{                
+
                 const db = (await connectDB).db('hongtest')  
                 const collection = db.collection("board")
     
                 const result = await collection.updateOne(
-                        { _id : new ObjectId(id) },
+                        { 
+                            _id : new ObjectId(id),
+                            writer : ( session?.user.name ) ? session?.user.name : ''
+                        },
                         { $set : {title:title,content:content} }
                     )
-                
+                console.log(result)
             }catch (error) {
                 response.status(500).redirect('/write')
             }

@@ -5,14 +5,14 @@ import Img_Test from '/public/test.png'
 export default function List(){
     let Products = ['Prod1','Prod2','상품1','상품2']
     let Converted = Products.map((data, index) => {
-        console.log(index)
-        console.log(data)
+        //console.log(index)
+        //console.log(data)
 
         return 'none'
     })
 
-    console.log(Products)
-    console.log(Converted)
+    //console.log(Products)
+    //console.log(Converted)
 
     return (
         <div>

@@ -1,6 +1,7 @@
 import { MongoClient } from 'mongodb'
+import { DB_INFO } from '@/config/config.js'
 
-const url = 'mongodb+srv://hongtest:hongtest@cluster0.9d8cgmw.mongodb.net/?retryWrites=true&w=majority'
+const url = DB_INFO.url
 const options = { useNewUrlParser: true }
 let connectDB
 
